@@ -1,11 +1,11 @@
-EXE=cuda_driver_example
+EXE=driver_api unified_memory
 
 all: $(EXE)
 
 kernel.ptx: kernel.cu
 	nvcc $< --ptx -o $@
 
-cuda_driver_example: cuda_driver_example.cpp kernel.ptx
+%: %.cpp kernel.ptx
 	nvcc $< -o $@ -lcuda
 
 clean:
