@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <cuda.h>
 
-#define N 10;
+#define N 10
 
 // This will output the proper CUDA error strings
 // in the event that a CUDA host call returns an error

@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <cuda.h>
 
-#define N 10;
+#define N 10
 
 // This will output the proper CUDA error strings
 // in the event that a CUDA host call returns an error
@@ -53,8 +53,7 @@ void initCUDA()
     // get first CUDA device
     checkCudaErrors(cuDeviceGet(&device, 0));
 
-    char name[100];
-    cuDeviceGetName(name, 100, device);
+    char name[100]; cuDeviceGetName(name, 100, device);
     printf("> Using device 0: %s\n", name);
 
     // get compute capabilities and the devicename
@@ -138,6 +137,7 @@ int main(int argc, char **argv)
 
     // initialize
     printf("- Initializing...\n");
+    return 0;
     initCUDA();
 
     // allocate memory
