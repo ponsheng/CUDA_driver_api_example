@@ -137,7 +137,6 @@ int main(int argc, char **argv)
 
     // initialize
     printf("- Initializing...\n");
-    return 0;
     initCUDA();
 
     // allocate memory
